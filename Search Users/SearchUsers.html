@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>This is the home page</title>
+    <link rel="stylesheet" href="SearchUsers.css" />
+    <link rel="icon" href="Content/fsc_logo.ico">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-remote-config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAZ-xJ2QFWT5R-QeOEDQlo9Wa2qu_H6khM",
+            authDomain: "fsc-mentor-matching.firebaseapp.com",
+            projectId: "fsc-mentor-matching",
+            storageBucket: "fsc-mentor-matching.appspot.com",
+            messagingSenderId: "281627899430",
+            appId: "1:281627899430:web:fc4c5ff79704aacd0d58e7",
+            measurementId: "G-1CBXR5MBT7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const Profile_Data = firebase.firestore();
+        firebase.analytics();
+    </script>
+
+    <script src="SearchUsers.js" defer> </script>
+</head>
+
+<body>
+    <section>
+        <header id="header" class="">
+            <div>
+                <a class="" href="../Home Screen/Home.html">FSC Mentor Match</a>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="../Home Screen/Home.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="../Forum/Forums.html">Class Reviews</a>
+                            </li>
+                            <li>
+                                <a href="../Profile/Profile.html">Profile</a>
+                            </li>
+                            <li>
+                                <a href="../Match/Matches.html">Matches</a>
+                            </li>
+                            <li>
+                                <a href="../Log In/Login.html">Sign In</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            </nav>
+        </header>
+    </section>
+    
+    <div id="mainD">
+        <section id="mainSec2" class="block">
+            <br>
+            <article>
+                <form id="searches">
+                    <article>
+                        <br>
+                        <input id="searchUser" type="text" class="input-field"
+                            placeholder="Search Users By Field"><br><br>
+                        <button id="search1" class="submit-buton" style="background-color: rgb(153, 153, 202);">First
+                            Name Search</button>
+                    </article>
+                </form>
+                <form id="searches2">
+                    <article>
+                        <button id="search2" class="submit-buton" style="background-color: rgb(247, 247, 133);">Last
+                            Name Search</button>
+                    </article>
+                </form>
+                <form id="searches3">
+                    <article>
+                        <button id="search3" class="submit-buton" style="background-color: rgb(35, 100, 241);">Academic
+                            Year Search</button>
+                    </article>
+                </form>
+                <form id="searches4">
+                    <article>
+                        <button id="search4" class="submit-buton" style="background-color: rgb(241, 156, 59);">Major
+                            Search</button>
+                    </article>
+                </form>
+                <form id="searches5">
+                    <article>
+                        <button id="search5" class="submit-buton" style="background-color: rgb(235, 45, 54);">Interests
+                            Search</button>
+                    </article>
+                </form>
+                <form id="searches6">
+                    <article>
+                        <button id="search6" class="submit-buton" style="background-color: rgb(67, 238, 138);">Status
+                            Search</button>
+                    </article>
+                </form>
+            </article>
+            <article>
+                <ul id="profileInfo2">
+                </ul>
+                <br>
+        </section>
+    </div>
+    <div>
+        <section>
+            <footer id="header"> BCS 430W </footer>
+        </section>
+    </div>
+
+</body>
+
+</html>
