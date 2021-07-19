@@ -7,7 +7,8 @@ The older third and fourth year students will act as a mentor to the younger stu
 
 This project was build in firebase, the forntend is in HTML & CSS, with javascript used on the backend.
 
-All files for this system are included in this repository, since the system was built in firebase, I have excluded my firebase project code.
+All files for this system are included in this repository, since the system was built in firebase. 
+I have excluded my firebase project code, and wrote comments where I removed the code.
 
 To access the web app you can click the link below 👇.
   Link -> https://fsc-mentor-matching.web.app/Home%20Screen/Home.html
