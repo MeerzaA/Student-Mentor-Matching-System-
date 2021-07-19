@@ -8,4 +8,6 @@ The older third and fourth year students will act as a mentor to the younger stu
 To access the web app you can click the link below 👇.
   Link -> https://fsc-mentor-matching.web.app/Home%20Screen/Home.html
   
-You will need to make an account to get started.
+Note**
+ - You will need to make an account to get started.
+ - This system is best used on browser, it has not been optamized for mobile.
