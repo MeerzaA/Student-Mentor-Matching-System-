@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="ProfileEdit_Style.css" />
+    <link rel="icon" href="../Content/fsc_logo.ico">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-remote-config.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        // Some firebase project data was removed, so that I can post the project on github
+        var firebaseConfig = {
+            apiKey: "",
+            authDomain: "fsc-mentor-matching.firebaseapp.com",
+            projectId: "fsc-mentor-matching",
+            storageBucket: "fsc-mentor-matching.appspot.com",
+            messagingSenderId: "",
+            appId: "",
+            measurementId: ""
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db2 = firebase.firestore();
+    </script>
+
+
+    <script src="ProfileEdit.js" defer> </script>
+
+</head>
+
+<body>
+
+
+    <div class="hero">
+        <div class="form-box">
+            <h1 id="h9">😎 Edit Your Profile 😎</h1>
+            <form id="Login" class="input-group">
+                <input id="firstName" type="text" class="input-field" placeholder="First Name" required>
+                <input id="lastName" type="text" class="input-field" placeholder="Last Name" required>
+                <input id="contact" type="text" class="input-field" placeholder="Best Way to Contact You" required>
+                <input id="dob" type="date" class="input-field" placeholder="Date of Birth" required>
+                <br>
+                <br>
+                <select id="gender" name="gender">
+                    <option value="" disabled selected>Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br>
+                <br>
+                <select id="major" name="major">
+                    <option value="" disabled selected>Select your Major</option>
+                    <option value="Aeronautical Science - Professional Pilot">Aeronautical Science - Professional Pilot</option>
+                    <option value="Applied Economics">Applied Economics</option>
+                    <option value="Applied Gerontology">Applied Gerontology</option>
+                    <option value="Applied Mathematics">Applied Mathematics</option>
+                    <option value="Applied Psychology">Applied Psychology</option>
+                    <option value="Architectural Engineering Technology">Architectural Engineering Technology</option>
+                    <option value="Aviation Administration">Aviation Administration</option>
+                    <option value="Bioscience">Bioscience</option>
+                    <option value="Business Analytics">Business Analytics</option>
+                    <option value="Business Management">Business Management</option>
+                    <option value="Civil Engineering Technology">Civil Engineering Technology</option>
+                    <option value="Computer Engineering Technology">Computer Engineering Technology</option>
+                    <option value="Computer Programming and Information Systems">Computer Programming and Information Systems</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Computer Security Technology">Computer Security Technology</option>
+                    <option value="Construction Management Engineering Technology">Construction Management Engineering Technology</option>
+                    <option value="Criminal Justice: Law Enforcement Technology">Criminal Justice: Law Enforcement Technology</option>
+                    <option value="Criminal Justice: Police, Courts and Corrections">Criminal Justice: Police, Courts and Corrections</option>
+                    <option value="Dental Hygiene">Dental Hygiene</option>
+                    <option value="Dental Hygiene Completion - online">Dental Hygiene Completion - online</option>
+                    <option value="Electrical Engineering Technology">Electrical Engineering Technology</option>
+                    <option value="Geographic Information Systems">Geographic Information Systems</option>
+                    <option value="Global Business Management">Global Business Management</option>
+                    <option value="Health Promotion and Wellness">Health Promotion and Wellness</option>
+                    <option value="Horticultural Technology Management">Horticultural Technology Management</option>
+                    <option value="Industrial Technology - Automotive Management Technology">Industrial Technology - Automotive Management Technology</option>
+                    <option value="Industrial Technology - Facility Management Technology">Industrial Technology - Facility Management Technology</option>
+                    <option value="Interaction Design (IxD)">Interaction Design (IxD)</option>
+                    <option value="Manufacturing Engineering Technology">Manufacturing Engineering Technology</option>
+                    <option value="Mechanical Engineering Technology">Mechanical Engineering Technology</option>
+                    <option value="Medical Laboratory Science">Medical Laboratory Science</option>
+                    <option value="Nursing">Nursing</option>
+                    <option value="Nursing RN to BS Completion - online">Nursing RN to BS Completion - online</option>
+                    <option value="Nutrition Science">Nutrition Science</option>
+                    <option value="Professional Communications">Professional Communications</option>
+                    <option value="Science, Technology, & Society">Science, Technology, & Society</option>
+                    <option value="Security Systems">Security Systems</option>
+                    <option value="Software Technology">Software Technology</option>
+                    <option value="Sport Management">Sport Management</option>
+                    <option value="Visual Communications: Art & Graphic Design">Visual Communications: Art & Graphic Design</option>
+                    <option value="Criminal Justice - Law Enforcement">Criminal Justice - Law Enforcement</option>
+                    <option value="General Horticulture">General Horticulture</option>
+                    <option value="Landscape Development">Landscape Development</option>
+                    <option value="Liberal Arts and Sciences">Liberal Arts and Sciences</option>
+                    <option value="Air Force ROTC">Air Force ROTC</option>
+                    <option value="Anthropology Minor">Anthropology Minor</option>
+                    <option value="Applied Mathematics Minor">Applied Mathematics Minor</option>
+                    <option value="Art & Graphic Design Minor">Art & Graphic Design Minor</option>
+                    <option value="Asian Studies Minor">Asian Studies Minor</option>
+                    <option value="Aviation Administration Minor">Aviation Administration Minor</option>
+                    <option value="Aviation Flight Minor">Aviation Flight Minor</option>
+                    <option value="Biology Minor">Biology Minor</option>
+                    <option value="Business Management Minor">Business Management Minor</option>
+                    <option value="Chemistry Minor">Chemistry Minor</option>
+                    <option value="Communication Minor">Communication Minor</option>
+                    <option value="Computer Networking Minor">Computer Networking Minor</option>
+                    <option value="Computer Programming and Information Systems Minor">Computer Programming and Information Systems Minor</option>
+                    <option value="Economics Minor">Economics Minor</option>
+                    <option value="English Literature Minor">English Literature Minor</option>
+                    <option value="Geography Minor">Geography Minor</option>
+                    <option value="History Minor">History Minor</option>
+                    <option value="Italian Studies Minor">Italian Studies Minor</option>
+                    <option value="Latin American Studies Minor">Latin American Studies Minor</option>
+                    <option value="Legal Studies Minor">Legal Studies Minor</option>
+                    <option value="Management Information Systems Minor">Management Information Systems Minor</option>
+                    <option value="Middle Eastern and Islamic Studies Minor">Middle Eastern and Islamic Studies Minor</option>
+                    <option value="Mobile Applications Development Minor">Mobile Applications Development Minor</option>
+                    <option value="Organizational Leadership Minor">Organizational Leadership Minor</option>
+                    <option value="Ornamental Horticulture Minor">Ornamental Horticulture Minor</option>
+                    <option value="Physics Minor">Physics Minor</option>
+                    <option value="Politics Minor">Politics Minor</option>
+                    <option value="Sociology Minor">Sociology Minor</option>
+                    <option value="Sport Management Minor">Sport Management Minor</option>
+                    <option value="Web Development Minor">Web Development Minor</option>
+                    <option value="Women, Gender, and Sexuality Studies Minor">Women, Gender, and Sexuality Studies Minor</option>
+                    <option value="Technology Management">Technology Management</option>
+                </select><br>
+                <br>
+    
+                <select id="academicYear" name="academicYear">
+                    <option value="" disabled selected>Select your Academic Year</option>
+                    <option value="Freshman">Freshman</option>
+                    <option value="Sophomore">Sophomore</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Senior">Senior</option>
+                </select><br>
+                <br>
+                <select id="interests" name="interests">
+                    <option value="" disabled selected>First Interest</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Television">Television</option>
+                    <option value="Collecting">Collecting</option>
+                    <option value="Music">Music</option>
+                    <option value="Gardening">Gardening</option>
+                    <option value="Video Games">Video Games</option>
+                    <option value="Fishing">Fishing</option>
+                    <option value="Walking">Walking</option>
+                    <option value="Playing Sports">Playing Sports</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Traveling">Traveling</option>
+                    <option value="Watching Sports">Watching Sports</option>
+                    <option value="Writing">Writing</option>
+                    <option value="Running">Running</option>
+                    <option value="Volunteer Work">Volunteer Work</option>
+                    <option value="Dancing">Dancing</option>
+                    <option value="Art">Art</option>
+                    <option value="Cooking">Cooking</option>
+                    <option value="Cycling">Cycling</option>
+                    <option value="Church Activities">Church Activities</option>
+                    <option value="Socializing">Socializing</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Fitness">Fitness</option>
+                    <option value="Blogging">Blogging</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Technology">Technology</option>
+                </select><br>
+                <br>
+                <select id="interests2" name="interests2">
+                    <option value="" disabled selected>Second Interest</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Television">Television</option>
+                    <option value="Collecting">Collecting</option>
+                    <option value="Music">Music</option>
+                    <option value="Gardening">Gardening</option>
+                    <option value="Video Games">Video Games</option>
+                    <option value="Fishing">Fishing</option>
+                    <option value="Walking">Walking</option>
+                    <option value="Playing Sports">Playing Sports</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Traveling">Traveling</option>
+                    <option value="Watching Sports">Watching Sports</option>
+                    <option value="Writing">Writing</option>
+                    <option value="Running">Running</option>
+                    <option value="Volunteer Work">Volunteer Work</option>
+                    <option value="Dancing">Dancing</option>
+                    <option value="Art">Art</option>
+                    <option value="Cooking">Cooking</option>
+                    <option value="Cycling">Cycling</option>
+                    <option value="Church Activities">Church Activities</option>
+                    <option value="Socializing">Socializing</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Fitness">Fitness</option>
+                    <option value="Blogging">Blogging</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Technology">Technology</option>
+                </select><br>
+                <br>
+                <select id="status" name="status">
+                    <option value="" disabled selected>Status</option>
+                    <option value="Unmatched">Unmatched</option>
+                    <option value="Matched">Matched</option>
+                </select> <br>
+                <br>
+                <textarea id="description" name="description" rows="4" cols="55"placeholder="Tell us about yourself!" ></textarea>
+                <br>
+                <button id="write_Test" type="submit" formnovalidate class="submit-buton"> Save </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("Login");
+        var y = document.getElementById("Signup");
+        var z = document.getElementById("buton");
+
+        function Signup() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function Login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+
+
+</body>
+
+</html>

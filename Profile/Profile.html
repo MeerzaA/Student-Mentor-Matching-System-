@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link rel="stylesheet" href="ProfileStyle.css" />
+    <link rel="icon" href="../Content/fsc_logo.ico">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-remote-config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        // Some firebase project data was removed, so that I can post the project on github
+        var firebaseConfig = {
+            apiKey: "",
+            authDomain: "fsc-mentor-matching.firebaseapp.com",
+            projectId: "fsc-mentor-matching",
+            storageBucket: "fsc-mentor-matching.appspot.com",
+            messagingSenderId: "",
+            appId: "",
+            measurementId: ""
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db2 = firebase.firestore();
+    </script>
+
+
+    <script src="Profile.js" defer> </script>
+</head>
+
+<body>
+    <style>img{ height:50px; width:50px; background-color: aliceblue; border:double}</style>
+    <section>
+        <header id="header" class="">
+            <div>
+                <a class="" href="../Home Screen/Home.html">FSC Mentor Match</a>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="../Home Screen/Home.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="../Forum/Forums.html">Class Reviews</a>
+                            </li>
+                            <li>
+                                <a href="../Profile/Profile.html">Profile</a>
+                            </li>
+                            <li>
+                                <a href="../Match/Matches.html">Matches</a>
+                            </li>
+                            <li>
+                                <a href="../Log In/Login.html">Sign In</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            </nav>
+        </header>
+    </section>
+    <div id="mainD">
+        <section id="mainSec" class="block">
+            <br>
+                <article>
+                    <img id="myimg">
+                    <br>
+            <button id="putProfPic1" type='file' style="background-color: rgb(114, 201, 153);">Choose File</button>
+            <br>
+            <button id="putProfPic" class="submit-buton" style="background-color: rgb(169, 107, 182);">Add Profile Picture</button>
+        </article>
+            <article>
+            <ul id="profileInfo">
+            </ul>
+            <br>
+        </article>
+            <article>
+                <button class="submit-buton" onclick="window.location.href = '../Profile Edit/ProfileEdit.html'" style="background-color: rgb(169, 107, 182);"> Edit </button>
+            </article>
+            <article>
+                <button class="submit-buton" onclick="SignOutEvent()" style="background-color: rgb(114, 201, 153);"> Sign Out </button>
+            </article>
+
+        </section>
+    </div>
+    <div>
+        <section>
+            <footer id="header"> BCS 430W </footer>
+        </section>
+    </div>
+
+</body>
+
+</html>

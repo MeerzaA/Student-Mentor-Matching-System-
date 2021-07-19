@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link rel="stylesheet" href="LoginStyle.css" />
+  <link rel="icon" href="../Content/fsc_logo.ico">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-remote-config.js"></script>
+
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    // Some firebase project data was removed, so that I can post the project on github
+    var firebaseConfig = {
+        apiKey: "",
+        authDomain: "fsc-mentor-matching.firebaseapp.com",
+        projectId: "fsc-mentor-matching",
+        storageBucket: "fsc-mentor-matching.appspot.com",
+        messagingSenderId: "",
+        appId: "",
+        measurementId: ""
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db2 = firebase.firestore();
+</script>
+
+
+  <script src="Login.js" defer> </script> 
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="form-box">
+    
+          <div class="button-box">
+            <div id="buton"> </div>
+            <button type="button" class="toggle-buton" onclick="Login()"> Sign In </button>
+            <button type="button" class="toggle-buton" onclick="Signup()"> Sign Up </button>
+          </div>
+    
+          <div id="Login-google" class="input-group-google">
+            <button id="Logout_buton" type="submit" class="submit-buton" onclick="googleSignIn()"> Sign In With Google
+            </button>
+          </div>
+    
+          <form id="Login" class="input-group">
+            <input id="Login_Email" type="text" class="input-field" placeholder="Email" required>
+            <input id="Login_Pass" type="text" class="input-field" placeholder="Password" required>
+            <input type="checkbox" class="check-box"> <span> Remember Password </span>
+            <button id="Login_buton" type="submit" class="submit-buton"> Sign In </button>
+          </form>
+    
+          <form id="Signup" class="input-group">
+            <input id="SignUp_Email" type="email" class="input-field" placeholder="Email" required>
+            <input id="SignUp_Pass" type="text" class="input-field" placeholder="Password" required>
+            <input type="checkbox" class="check-box"> <span> I agree to the terms & conditions </span>
+            <button id="SignUp_buton" type="submit" class="submit-buton"> Sign Up </button>
+          </form>
+        </div>
+      </div>
+    
+      <script>
+        var x = document.getElementById("Login");
+        var y = document.getElementById("Signup");
+        var z = document.getElementById("buton");
+        var a = document.getElementById("Login-google");
+    
+        function Signup() {
+          x.style.left = "-400px";
+          y.style.left = "50px";
+          z.style.left = "110px";
+          a.style.left = "-400px";
+        }
+    
+        function Login() {
+          x.style.left = "50px";
+          y.style.left = "450px";
+          z.style.left = "0px";
+          a.style.left = "50px";
+        }
+      </script>
+    
+  
+</body>
+
+</html>

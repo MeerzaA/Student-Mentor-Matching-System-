@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accept Match Request</title>
+    <link rel="stylesheet" href="Accept_Match.css" />
+
+    <link rel="icon" href="Content/fsc_logo.ico">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-remote-config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        // Some firebase project data was removed, so that I can post the project on github
+        var firebaseConfig = {
+            apiKey: "",
+            authDomain: "fsc-mentor-matching.firebaseapp.com",
+            projectId: "fsc-mentor-matching",
+            storageBucket: "fsc-mentor-matching.appspot.com",
+            messagingSenderId: "",
+            appId: "",
+            measurementId: ""
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db2 = firebase.firestore();
+    </script>
+
+    <script src="Accept_Match.js" defer> </script>
+
+</head>
+
+<body>
+
+    <section>
+        <header id="header" class="">
+            <div>
+                <a class="" href="../Home Screen/Home.html">FSC Mentor Match</a>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="../Home Screen/Home.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="../Forum/Forums.html">Class Reviews</a>
+                            </li>
+                            <li>
+                                <a href="../Profile/Profile.html">Profile</a>
+                            </li>
+                            <li>
+                                <a href="../Match/Matches.html">Matches</a>
+                            </li>
+                            <li>
+                                <a href="../Log In/Login.html">Sign In</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            </nav>
+        </header>
+    </section id="finalSections">
+
+    <div id="mainDiv">
+        <div class="form-box" tabindex="5">
+            <div id="finalSection" class="block">
+                <article>
+                    <div id="seeMatches">
+                        <h13 id="h13">🔒 Make Your Final Decision! 🔒</h12>
+                    </div>
+                    
+                    <ul id="finalMatch">
+                    </ul>
+                    <br>
+                    <br>
+                </article>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <section>
+            <footer id="header"> BCS 430W </footer>
+        </section>
+    </div>
+</body>
+
+</html>

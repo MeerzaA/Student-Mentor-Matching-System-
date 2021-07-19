@@ -1,0 +1,439 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li{
+  margin: 10px auto;
+}
+
+
+html {
+   min-height: 100%;
+   background: url(../Content/farmingdale-state-college.jpg) no-repeat center center fixed; 
+   background-size: cover;
+}
+
+#SearchReviews {
+    border:double;
+    border-color: black;
+    background-image: url(../Content/waves2.jpg);
+    width: fit-content;
+    margin: auto;
+}
+
+#div3 {
+  background-image: url(../Content/background.png);
+  background-repeat:repeat;
+  display: inline-block;
+}
+
+#div2 {
+    background-image: url(../Content/books.jpg);
+    background-repeat: repeat;
+    display: inline-block;
+}
+
+#finalSection {
+  background-image: url(../Content/pinkdots.jpg);
+  background-repeat: repeat;
+  display: inline-block;
+}
+
+#mainSec {
+  background-image: url(../Content/purpfloral.jpg);
+  background-repeat:repeat;
+}
+
+#mainSecs {
+  background-image: url(../Content/dots.jpg);
+  background-repeat:repeat;
+}
+
+#mainSecs2 {
+  background-image: url(../Content/greenyellow.jpg);
+  background-repeat:repeat;
+}
+
+#centeredFlagTitle {
+  text-align: center;
+}
+
+/* Style the header */
+header {
+  background-color: #005b54;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  height: 150px; 
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    margin: 0 auto;
+    font-family: Arial;
+    font-size: 100%;
+    width: 100%;
+    overflow: hidden;
+ }
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+    float: left;
+    width: 20%;
+}
+
+nav ul li:hover {
+    background-color: #111;
+ }
+
+article {
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #005b54;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  height: 75px; 
+}
+
+a {
+    color: white;
+    text-align: left;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+img {
+    object-fit: cover;
+    margin: 0 0 0 0;
+    width: auto;
+    height: auto;
+}
+
+.circleImg {
+    border-radius: 50%;
+}
+
+.slideImg {
+    max-width: 70%;
+    max-height: 70%;
+    vertical-align: middle;
+}
+
+.NavText {
+    font-size: 8px;
+    width: 100%;
+    height: auto;
+}
+
+.block {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  width: 50%;
+  text-align: center;
+}
+
+.posLeft {
+    float: left;
+}
+
+.posRight {
+    float: right;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#Queries {
+  list-style-type: none;
+  border:double;
+  border-color: black;
+  background-image: url(../Content/waves.gif);
+  padding: 20px;
+  -webkit-columns: 2;
+   -moz-columns: 2;
+        columns: 2;
+}
+
+#Queries li {
+  background: #FFFFFF;
+  list-style-position: inside;
+  break-inside: avoid;
+} 
+
+#h1 {
+    border: double;
+    border-color:#01121d;
+  text-align: center;
+  background-image: url(../Content/waves3.jpg);
+  color: rgb(7, 77, 105);
+  font-size: 30px;
+}
+
+#profileInfo {
+  list-style-type: none;
+  border:double;
+  border-color: black;
+  background-image: url(../Content/purple.gif);
+  padding: 20px;
+  size:inherit;
+}
+
+#profileInfo li {
+  border: double;
+  border-color: black;
+  background: #FFFFFF;
+  list-style-position: inside;
+}
+
+#matches {
+  border:double;
+  border-color: black;
+  list-style-type: none;
+  background: #387691;
+  padding: 20px;
+}
+
+#matchesInfo {
+  border:double;
+  border-color: black;
+  list-style-type: none;
+  background: #e6e332;
+  padding: 20px;
+}
+
+#matchesInfo li {
+  background: #FFFFFF;
+  list-style-position: inside;
+  break-inside: avoid;
+  font-size: 13px;
+  border: double;
+  border-color: black;
+} 
+
+#matchesInfo li img {
+  height: 110px;
+  width: 110px;
+} 
+
+#finalMatch li img {
+  height: 280px;
+  width: 280px;
+} 
+
+#profileInfo li img {
+  height: 400px;
+  width: 400px;
+} 
+
+#matches li img {
+  height: 280px;
+  width: 280px;
+} 
+
+
+#finalMatch {
+  border:double;
+  border-color: black;
+  list-style-type: none;
+  background: rgb(255, 222, 244);
+  padding: 20px;
+}
+
+#finalMatch li {
+  background: #FFFFFF;
+  list-style-position: inside;
+  break-inside: avoid;
+} 
+
+#h12 {
+  border: double;
+    border-color:#01121d;
+  text-align: center;
+  background-color:white;
+  color: black;
+  font-size: 45px;
+}
+
+#h19 {
+  border: double;
+    border-color:#01121d;
+  text-align: center;
+  background-color:rgb(228, 190, 190);
+  color: black;
+  font-size: 40px;
+}
+
+#h20 {
+  border: double;
+    border-color:#01121d;
+  text-align: center;
+  background-color:rgb(108, 228, 182);
+  color: black;
+  font-size: 40px;
+}
+
+#h13 {
+  border: double;
+    border-color:#01121d;
+  text-align: center;
+  background-color:rgb(168, 124, 197);
+  color: black;
+  font-size: 38px;
+}
+
+#a1 {
+  left:0mm;
+}
+
+
+#matches li {
+  background: #FFFFFF;
+  list-style-position: inside;
+  break-inside: avoid;
+} 
+
+#flagsInfo {
+  list-style-type: none;
+  border:double;
+  border-color: black;
+  background-color: rgb(139, 9, 9);
+  padding: 20px;
+}
+
+#flagsInfo li {
+  background: #FFFFFF;
+  list-style-position: inside;
+  break-inside: avoid;
+} 
+
+
